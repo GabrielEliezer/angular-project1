@@ -1,18 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
-import { MuralVagasComponent } from '../mural-vagas/mural-vagas.component';
-import { PainelVagasComponent } from '../painel-vagas/painel-vagas.component';
-
-const rotas: Routes = [
-  {path: 'mural', component: MuralVagasComponent},
-  {path: 'painel', component: PainelVagasComponent},
-  {path: '', redirectTo: '/mural', pathMatch:'full'}
-]
-
+import { Routes, RouterModule } from '@angular/router'; // CLI imports
+router
+const routes: Routes = [
+{ path: 'first-component', component: FirstComponent },
+{ path: 'second-component', component: SecondComponent }, ];
 @NgModule({
-  declarations: [],
-  imports: [RouterModule.forRoot(rotas)],
-  exports: [RouterModule]
-})
+imports: [RouterModule.forRoot(routes)],
+exports: [RouterModule] })
+
 export class AppRoutingModule { }
